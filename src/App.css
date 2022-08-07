@@ -52,12 +52,12 @@ body {
   border: 0;
   border-radius: 7px;
   cursor: pointer;
-  transition: all .28s ease-in;
+  transition: all .23s ease-in;
 }
 
 #generator-btn:hover {
   box-shadow: #2ef06866 5px 5px, rgba(46, 240, 88, 0.3) 10px 10px, rgba(46, 240, 72, 0.2) 15px 15px, rgba(46, 240, 49, 0.1) 20px 20px, rgba(78, 240, 46, 0.05) 25px 25px;
-  transform: translate3d(-10px, -5px, 10px);
+  transform: translate3d(-15px, -10px, 15px);
 }
 
 #copy-btn:hover {
@@ -82,6 +82,7 @@ body {
 }
 
 .input {
+  padding: 10px;
   border: 1px solid black;
   border-radius: 5px;
   font-size: 1.2rem;
@@ -92,4 +93,3 @@ body {
 .input:focus {
   outline: none;
 }
-
