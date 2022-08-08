@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import MovingComponent from 'react-moving-text';
 
 const App = () => {
   const [password, setPassword] = useState([])
@@ -9,7 +9,7 @@ const App = () => {
   const characters = [
     'A', 'B', 'C', 'D', 'E', 'F', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c',
     'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-    '*', '&', '$', '#', '!', '?', '.', 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 ]
+    '*', '&', '$', '#', '!', '?', '.', 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 
   function generatePassword() {
     for (let i = 0; i < 15; i++) {
@@ -39,23 +39,32 @@ const App = () => {
     <section id="generator">
       <div className="container">
         <div className="generator__content">
-          <h1 className="title">Create <br /><strong>random password</strong></h1>
+          <MovingComponent
+            type="fadeInFromBottom"
+            duration="1000ms"
+            delay=".1s"
+            direction="normal"
+            timing="ease"
+            iteration="1"
+            fillMode="none">
+            <h1 className="title">Create <br /><strong>random password</strong></h1>
+          </MovingComponent>
           <div className="holder">
             <input
               type="text"
               value={password}
               className="input"
-              maxLength=""
+              readOnly
             />
-            <button 
-              onClick={copy} 
-              id="copy-btn" 
+            <button
+              onClick={copy}
+              id="copy-btn"
               className={isActive ? "button copy-btn active" : "button copy-btn"}>
-                Copy
+              Copy
             </button>
           </div>
-          <button 
-            onClick={isClicked ? regeneratePassword : generatePassword} 
+          <button
+            onClick={isClicked ? regeneratePassword : generatePassword}
             id="generator-btn" className="button extra">{isClicked ? "Get new password" : "Generate password"}
           </button>
         </div>
