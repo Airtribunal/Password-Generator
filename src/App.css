@@ -17,8 +17,7 @@
 
 body {
   overflow: hidden;
-  background: url("./background.png") center no-repeat;
-  background-size: cover;
+  background-color: #000;
 }
 
 /* Container */
