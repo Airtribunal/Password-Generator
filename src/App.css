@@ -16,8 +16,9 @@
 }
 
 body {
-  overflow: hidden;
-  background-color: #000;
+  background: url("./background/back.jpg") center no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 /* Container */
