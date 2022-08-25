@@ -3,6 +3,8 @@ import './App.css';
 import MovingComponent from 'react-moving-text';
 
 const App = () => {
+  // Tasks - controlled input to regulate an amount of the symbols when creating a password 
+
   const [password, setPassword] = useState([])
   const [isClicked, setIsClicked] = useState(false)
   const [isActive, setIsActive] = useState(false)
