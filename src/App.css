@@ -16,9 +16,7 @@
 }
 
 body {
-  background: url("./background/back.jpg") center no-repeat;
-  background-size: cover;
-  height: 100vh;
+  background-color: #000;
 }
 
 /* Container */
